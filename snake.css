@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap");
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+  --box-shadow: 0 0 1rem var(var(--main-color));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background-color: var(--bg-color); 
+  */
+  background: lightcyan;
+}
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  background: var(--second-bg-color);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  /* border: 1px solid var(--main-color); */
+}
+.game-details {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 20px 27px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.play-board {
+  width: 100%;
+  height: 90%;
+  background: var(--bg-color);
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.play-board .food {
+  background: var(--main-color);
+}
+.play-board .head {
+  background: red;
+}
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls i {
+  color: var(--text-color);
+  padding: 25px 0;
+  width: calc(100% / 4);
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  border-right: 1px solid var(--bg-color);
+}
+.visio {
+  font-size: 0.7rem;
+  /* display: flex; */
+  /* align-items: center;
+  text-align: center; */
+  margin-top: 7px;
+  color: var(--main-color);
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .visio {
+    display: none;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
